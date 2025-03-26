@@ -1,13 +1,25 @@
 import java.util.Scanner
+
 fun main() {
     var read = Scanner(System.`in`)
-    println("enter firstnumber(number):")
-      var number = readln()
 
-    println("enter secondnumber(num):")
-     var num = readln()
+    println("Enter first number")
+    var first = read.nextInt()
 
-    println("enter")
+    println("Enter second number")
+    var second = read.nextInt()
+
+    println("Enter an operator (+,-,/,*)")
+    var operator = read.next()
+
+    var result = when(operator){
+        "+" -> first + second
+        "-" -> first - second
+        "*" -> first * second
+        "/" -> first / second
+        else -> "Invalid operator"
+    }
+    println(result)
 
 
 
